@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 9149756427250554134}
   - component: {fileID: 8303241834115246390}
   - component: {fileID: 827244639480883073}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 1448908555334429164}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -15.63, y: -5.53, z: 0}
+  m_LocalPosition: {x: -14.53, y: -5.29, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -78,12 +78,11 @@ MonoBehaviour:
   ground:
     serializedVersion: 2
     m_Bits: 8
-  bottomOffset: {x: -0.11, y: -0.86}
   oldSprite: {fileID: 8491957714333543064}
   childSprite: {fileID: 7083189826088120898}
+  ChangePrefab: {fileID: 7479392669352522736, guid: 7ed2b49248d1a1e49b07a14f654887f6, type: 3}
   jumpCount: 0
-  isOld: 1
-  isDead: 0
+  isHurt: 0
 --- !u!1 &7083189826088120898
 GameObject:
   m_ObjectHideFlags: 0
@@ -97,9 +96,9 @@ GameObject:
   - component: {fileID: 5471935177491287122}
   - component: {fileID: 9105332961664757500}
   - component: {fileID: 8058217454714956832}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Child
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -224,7 +223,7 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.09428644, y: 0.004945278}
+  m_Offset: {x: -0.05, y: -0.04}
   m_Size: {x: 0.7688761, y: 1.9318495}
   m_Direction: 0
 --- !u!114 &8058217454714956832
@@ -239,6 +238,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc1d720d43f076a408920c9916dbcecf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bottomOffset: {x: -0.09, y: -0.8}
 --- !u!1 &8491957714333543064
 GameObject:
   m_ObjectHideFlags: 0
@@ -252,9 +252,9 @@ GameObject:
   - component: {fileID: 2418266532926372687}
   - component: {fileID: 500695064394406782}
   - component: {fileID: 4941701716705945753}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Old
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -268,7 +268,7 @@ Transform:
   m_GameObject: {fileID: 8491957714333543064}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.01, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -394,3 +394,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98ed2d22e3b6298469981adc404c6062, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bottomOffset: {x: -0.12, y: -0.82}

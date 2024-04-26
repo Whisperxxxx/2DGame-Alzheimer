@@ -7,7 +7,7 @@ public class OldController : MonoBehaviour
 
     public Vector2 bottomOffset;
 
-
+    // Adjust the collider when dying
     public void AdjustCollider()
     {
         var collider = GetComponent<CapsuleCollider2D>();
@@ -17,6 +17,7 @@ public class OldController : MonoBehaviour
         }
     }
 
+    // Make the old model seems toe according to adjust the old collider
     public void OldCollider1()
     {
         var collider = GetComponent<CapsuleCollider2D>();
@@ -37,6 +38,7 @@ public class OldController : MonoBehaviour
         }
     }
 
+    // Change to the child when the anim over
     public void ChangeToChild()
     {
         PlayerController.Instance.ChangeForm(false);

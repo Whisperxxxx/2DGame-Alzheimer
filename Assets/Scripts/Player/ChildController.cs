@@ -7,6 +7,7 @@ public class ChildController : MonoBehaviour
 
     public Vector2 bottomOffset;
 
+    // Adjust the collider when dying
     public void AdjustCollider()
     {
         var collider = GetComponent<CapsuleCollider2D>();
@@ -16,12 +17,14 @@ public class ChildController : MonoBehaviour
         }
     }
 
+    // Change to the old when anim over
     public void ChangeToOld()
     {
         PlayerController.Instance.ChangeForm(true);
     }
 
-    public void OverHurnt()
+    // Set the hurting to flase
+    public void OverHurt()
     {
         PlayerController.Instance.OverHurt();
 

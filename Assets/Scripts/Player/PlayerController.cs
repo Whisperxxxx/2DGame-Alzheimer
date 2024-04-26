@@ -14,6 +14,9 @@ public class PlayerController : UnitySingleton<PlayerController>
     GameObject oldSprite; 
     [SerializeField]
     GameObject childSprite;
+    [SerializeField]
+    GameObject ChangePrefab; // The animation prefab of changeform
+ 
 
     private float childSpeed = 4f;
     private float oldSpeed = 1f;
@@ -21,7 +24,8 @@ public class PlayerController : UnitySingleton<PlayerController>
     private bool isGround;
     public int jumpCount = 0;
     private Rigidbody2D rb;
-    public bool isHurt;
+    private bool isHurt;
+    private bool isChange;
     private bool isOld = true; // Used to change the player form
     private bool isDead = false;
     private bool shouldChange = false; // Check if need to change form after falling
@@ -36,18 +40,12 @@ public class PlayerController : UnitySingleton<PlayerController>
     // Returns the appropriate Animator based on the current form
     private Animator CurrentAnimator
     {
-        get
-        {
-            return isOld ? oldSprite.GetComponent<Animator>() : childSprite.GetComponent<Animator>();
-        }
+        get { return isOld ? oldSprite.GetComponent<Animator>() : childSprite.GetComponent<Animator>(); }
     }
 
     private Vector2 CurrentBottomOffset
     {
-        get
-        {
-            return isOld ? oldSprite.GetComponent<OldController>().bottomOffset : childSprite.GetComponent<ChildController>().bottomOffset;
-        }
+        get { return isOld ? oldSprite.GetComponent<OldController>().bottomOffset : childSprite.GetComponent<ChildController>().bottomOffset; }
     }
 
     void Start()
@@ -62,7 +60,7 @@ public class PlayerController : UnitySingleton<PlayerController>
 
     void Update()
     {
-        if (!isHurt && !isDead)
+        if (!isChange && !isDead)
         {
             Jump();
         }
@@ -72,11 +70,11 @@ public class PlayerController : UnitySingleton<PlayerController>
     {
         SwitchAnim();
         isGround = Physics2D.OverlapCircle((Vector2)transform.position + CurrentBottomOffset, collisionRadius, ground);    // Check if the player is on the ground
-        if (!isDead && !isHurt)
+        if (!isDead && !isChange)
         {
             GroundMovement();
         }
-        else if (isDead || isHurt)
+        else if (isDead || isChange)
         {
             rb.velocity = new Vector2(0, rb.velocity.y);
         }
@@ -117,11 +115,12 @@ public class PlayerController : UnitySingleton<PlayerController>
             animator.SetBool("falling", false);
 
             // Transform to the old if there is no jumpCount;
-            if (shouldChange) // 
+            if (shouldChange)
             {
-                animator.SetTrigger("change");
-                isHurt = true;
+                isChange = true;
                 shouldChange = false; // Reset the statement
+                //ChangeForm(true);
+                //Instantiate(ChangePrefab, rb.transform.position + new Vector3(0, 1.5f, 0), rb.transform.rotation, rb.transform);
             }
         }
         else if (!isGround && rb.velocity.y > 0)
@@ -138,12 +137,24 @@ public class PlayerController : UnitySingleton<PlayerController>
                 shouldChange = true;
             }
         }
+        if (isHurt)
+        {
+            animator.SetBool("hurting", true);
+        }
+        else
+        {
+            animator.SetBool("hurting", false);
+
+        }
+        if (isChange)
+        {
+            animator.SetTrigger("change");
+        }
+
         if (isDead)
         {
             animator.SetTrigger("death");
             YTEventManager.Instance.TriggerEvent(EventStrings.GAME_OVER);
-            // StartCoroutine(RestartGame());
-         
         }
     }
 
@@ -156,15 +167,15 @@ public class PlayerController : UnitySingleton<PlayerController>
             Destroy(other.gameObject);
             if(isOld)
             {
-                isHurt = true;
-                CurrentAnimator.SetTrigger("change"); // Transform to the child
-
+                isChange = true;
+                //ChangeForm(false);
+                //Instantiate(ChangePrefab, rb.transform.position + new Vector3(0, 1.5f, 0), rb.transform.rotation, rb.transform);
             }
             else
             {
                 jumpCount += 1;
                 shouldChange = false;
-                CurrentAnimator.SetBool("hurting", true); ;
+                isHurt = true;
             }
         }
         else if (other.gameObject.CompareTag("Hazard"))
@@ -173,16 +184,16 @@ public class PlayerController : UnitySingleton<PlayerController>
         }
     }
 
+    // Change the player's form
     public void ChangeForm(bool becomeOld)
     {
-        // Change the player's form
         if (becomeOld)
         {
             oldSprite.SetActive(true);
             childSprite.SetActive(false);
             isOld = true;
             jumpCount = 0;
-            isHurt = false;
+            isChange = false;
         }
         else
         {
@@ -190,13 +201,13 @@ public class PlayerController : UnitySingleton<PlayerController>
             childSprite.SetActive(true);
             isOld = false;
             jumpCount += 1;
-            isHurt = false;
+            isChange = false;
         }
     }
 
     public void OverHurt()
     {
-        CurrentAnimator.SetBool("hurting", false); ;
+        isHurt = false;
     }
 
     void OnDrawGizmos()
@@ -206,14 +217,4 @@ public class PlayerController : UnitySingleton<PlayerController>
         Gizmos.DrawWireSphere((Vector2)transform.position + CurrentBottomOffset, collisionRadius);
     }
 
-    /*
-    IEnumerator RestartGame()
-    {
-        // Wait the animation of Death
-        yield return new WaitForSeconds(2);
-
-        // Restart the game
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-    }
-    */
 }
