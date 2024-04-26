@@ -36,4 +36,10 @@ public class OldController : MonoBehaviour
             collider.offset = new Vector2(-0.08464217f, 0f);
         }
     }
+
+    public void ChangeToChild()
+    {
+        PlayerController.Instance.ChangeForm(false);
+    }
+
 }

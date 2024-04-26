@@ -15,4 +15,16 @@ public class ChildController : MonoBehaviour
             collider.size = new Vector2(1f, 1f);
         }
     }
+
+    public void ChangeToOld()
+    {
+        PlayerController.Instance.ChangeForm(true);
+    }
+
+    public void OverHurnt()
+    {
+        PlayerController.Instance.OverHurt();
+
+    }
+
 }
