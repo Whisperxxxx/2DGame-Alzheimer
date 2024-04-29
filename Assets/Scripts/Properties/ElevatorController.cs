@@ -36,7 +36,14 @@ namespace Myd.Platform
                 _playerOn = value;
             }
         }
-        
+
+        public bool playerUnder =>
+            (PlayerController.Instance.transform.position.y < transform.position.y&&PlayerController.Instance.transform.position.y>(initialPos.y-5f)) &&
+            (PlayerController.Instance.transform.position.x <
+             transform.position.x + initialDetectBounds.size.x &&
+             PlayerController.Instance.transform.position.x >
+             transform.position.x - initialDetectBounds.size.x);
+
         public Bounds initialDetectBounds;
         public Vector3 initialPos=Vector3.zero;
         public Bounds detectBounds
@@ -76,7 +83,7 @@ namespace Myd.Platform
         // Update is called once per frame
         void Update()
         {
-            if (activate)
+            if (activate&&!playerUnder)
             {
                 Movement();
             }

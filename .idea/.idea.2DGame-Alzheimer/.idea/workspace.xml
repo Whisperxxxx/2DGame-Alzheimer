@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="90cc62bf-d8e5-44e6-8288-36213a1edcb3" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Properties/KeyController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Properties/KeyController.cs.meta" afterDir="false" />
+    <list default="true" id="90cc62bf-d8e5-44e6-8288-36213a1edcb3" name="更改" comment="钥匙">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.2DGame-Alzheimer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2DGame-Alzheimer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Properties/DoorController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Properties/DoorController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/道具.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/道具.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Properties/ElevatorController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Properties/ElevatorController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +112,7 @@
       <workItem from="1714038655253" duration="2447000" />
       <workItem from="1714372402832" duration="1816000" />
       <workItem from="1714374252353" duration="556000" />
-      <workItem from="1714383440956" duration="1108000" />
+      <workItem from="1714383440956" duration="2371000" />
     </task>
     <task id="LOCAL-00001" summary="电梯，UI（游戏界面的按钮点不了）">
       <option name="closed" value="true" />
@@ -140,7 +138,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714374792475</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="钥匙">
+      <option name="closed" value="true" />
+      <created>1714384594877</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1714384594877</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -177,6 +183,7 @@
     <MESSAGE value="电梯，UI（游戏界面的按钮点不了）" />
     <MESSAGE value="门，电梯优化" />
     <MESSAGE value="气球" />
-    <option name="LAST_COMMIT_MESSAGE" value="气球" />
+    <MESSAGE value="钥匙" />
+    <option name="LAST_COMMIT_MESSAGE" value="钥匙" />
   </component>
 </project>
