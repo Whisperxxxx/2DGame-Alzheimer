@@ -29,8 +29,9 @@ public class PlayerController : UnitySingleton<PlayerController>
     private bool isOld = true; // Used to change the player form
     private bool isDead = false;
     private bool shouldChange = false; // Check if need to change form after falling
-
-
+    
+    public bool haveKey = false;
+    
     // Returns the appropriate speed based on the current form
     private float CurrentSpeed
     {

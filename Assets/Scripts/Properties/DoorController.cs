@@ -9,9 +9,17 @@ public class DoorController : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            //通关
-            Debug.Log("Game Win");
-            YTEventManager.Instance.TriggerEvent(EventStrings.GAME_WIN);
+            if (PlayerController.Instance.haveKey)
+            {
+                //通关
+                Debug.Log("Game Win");
+                YTEventManager.Instance.TriggerEvent(EventStrings.GAME_WIN);
+            }
+            else
+            {
+                //没有钥匙
+                Debug.Log("No Key");
+            }
         }
     }
 }
