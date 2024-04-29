@@ -26,7 +26,7 @@ public class PlayerController : UnitySingleton<PlayerController>
     private Rigidbody2D rb;
     private bool isHurt;
     private bool isChange;
-    private bool isOld = true; // Used to change the player form
+    public bool isOld = true; // Used to change the player form
     private bool isDead = false;
     private bool shouldChange = false; // Check if need to change form after falling
     

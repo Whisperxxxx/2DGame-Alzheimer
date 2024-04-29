@@ -27,6 +27,7 @@ namespace Myd.Platform
                 if (_playerOn == false && value == true)
                 {
                     activate=true;
+                    if(!audioSource.isPlaying)audioSource.Play();
                 }
                 //人物在电梯上，电梯不下降
                 if (_playerOn == true && value == true&&isUp==false)
@@ -46,6 +47,9 @@ namespace Myd.Platform
 
         public Bounds initialDetectBounds;
         public Vector3 initialPos=Vector3.zero;
+
+        public AudioSource audioSource;
+        
         public Bounds detectBounds
         {
             get
@@ -78,6 +82,8 @@ namespace Myd.Platform
             TopY = transform.position.y + upHeight; //获取top点
             BottomY = transform.position.y; //获取bottom点
             initialPos = transform.position;
+            
+            audioSource = GetComponent<AudioSource>();
         }
 
         // Update is called once per frame
@@ -87,7 +93,11 @@ namespace Myd.Platform
             {
                 Movement();
             }
-            if (detectBounds.Contains(PlayerController.Instance.transform.position))
+            else
+            {
+                audioSource.Stop();
+            }
+            if (detectBounds.Contains(PlayerController.Instance.transform.position) && PlayerController.Instance.isOld)
             {
                 playerOn = true;
             }

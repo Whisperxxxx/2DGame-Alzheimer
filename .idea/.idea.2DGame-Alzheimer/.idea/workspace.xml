@@ -6,9 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="90cc62bf-d8e5-44e6-8288-36213a1edcb3" name="更改" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.2DGame-Alzheimer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2DGame-Alzheimer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/GameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/GameController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Properties/KeyController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Properties/KeyController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Tools/Event_Manager/EventStrings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Tools/Event_Manager/EventStrings.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level 1_1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level 1_1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/StartMenuManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/StartMenuManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Properties/BalloonController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Properties/BalloonController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Properties/ElevatorController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Properties/ElevatorController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -116,7 +119,8 @@
       <workItem from="1714372402832" duration="1816000" />
       <workItem from="1714374252353" duration="556000" />
       <workItem from="1714383440956" duration="2588000" />
-      <workItem from="1714389165270" duration="575000" />
+      <workItem from="1714389165270" duration="843000" />
+      <workItem from="1714390475361" duration="6076000" />
     </task>
     <task id="LOCAL-00001" summary="电梯，UI（游戏界面的按钮点不了）">
       <option name="closed" value="true" />
@@ -158,7 +162,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714386029277</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="钥匙到时间丢失">
+      <option name="closed" value="true" />
+      <created>1714390002325</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1714390002325</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -197,6 +209,7 @@
     <MESSAGE value="气球" />
     <MESSAGE value="钥匙" />
     <MESSAGE value="电梯检测到人物在下面范围内停止下降" />
-    <option name="LAST_COMMIT_MESSAGE" value="电梯检测到人物在下面范围内停止下降" />
+    <MESSAGE value="钥匙到时间丢失" />
+    <option name="LAST_COMMIT_MESSAGE" value="钥匙到时间丢失" />
   </component>
 </project>

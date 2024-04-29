@@ -9,6 +9,8 @@ public class BalloonController : MonoBehaviour
     
     public float moveDuration = 3.0f; // 移动到目标位置所需的时间  
     private Rigidbody2D rb; // Rigidbody2D组件引用  
+
+    public AudioSource audioSource;
     
     // Start is called before the first frame update
     void Start()
@@ -17,14 +19,17 @@ public class BalloonController : MonoBehaviour
         finalPos=transform.parent.position;
         
         rb = PlayerController.Instance.GetComponent<Rigidbody2D>(); // 获取Rigidbody2D组件  
+        
+        audioSource= GetComponent<AudioSource>();
     }
     
     //当碰撞到玩家时
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        if (!PlayerController.Instance.isOld && other.CompareTag("Player"))
         {
             // 开始移动到目标位置  
+            audioSource.Play();
             StartCoroutine(MoveToTargetPosition());  
         }
     }
