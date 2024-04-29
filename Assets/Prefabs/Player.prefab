@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 827244639480883073}
   m_Layer: 6
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -81,8 +81,15 @@ MonoBehaviour:
   oldSprite: {fileID: 8491957714333543064}
   childSprite: {fileID: 7083189826088120898}
   ChangePrefab: {fileID: 7479392669352522736, guid: 7ed2b49248d1a1e49b07a14f654887f6, type: 3}
+  jumpAudio: {fileID: 0}
+  runAudio1: {fileID: 0}
+  runAudio2: {fileID: 0}
+  changeAudio: {fileID: 0}
+  cellAudio: {fileID: 0}
+  spikeAudio: {fileID: 0}
   jumpCount: 0
-  isHurt: 0
+  isOld: 1
+  haveKey: 0
 --- !u!1 &7083189826088120898
 GameObject:
   m_ObjectHideFlags: 0

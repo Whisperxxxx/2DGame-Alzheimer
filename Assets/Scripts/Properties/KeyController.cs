@@ -18,6 +18,7 @@ public class KeyController : MonoBehaviour
         {
             PlayerController.Instance.haveKey = true;
             gameObject.SetActive(false);
+            Debug.Log("pick the key");
         }
     }
     private void LossKey()

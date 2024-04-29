@@ -16,7 +16,8 @@ public class PlayerController : UnitySingleton<PlayerController>
     GameObject childSprite;
     [SerializeField]
     GameObject ChangePrefab; // The animation prefab of changeform
- 
+
+    public AudioSource jumpAudio, runAudio1, runAudio2, changeAudio, cellAudio, spikeAudio;
 
     private float childSpeed = 4f;
     private float oldSpeed = 1f;
@@ -88,6 +89,30 @@ public class PlayerController : UnitySingleton<PlayerController>
         float horizontalMove = Input.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2(horizontalMove * CurrentSpeed, rb.velocity.y);
 
+        if (horizontalMove != 0 && isGround)
+        {
+            // Determine which audio to play based on if the player is old or not
+            AudioSource runAudio = isOld ? runAudio1 : runAudio2;
+
+            // If the run audio is not playing, play it
+            if (!runAudio.isPlaying)
+            {
+                runAudio.Play();
+            }
+        }
+        else
+        {
+            // If horizontal movement stops, stop the run audio if it's playing
+            if (runAudio1.isPlaying)
+            {
+                runAudio1.Stop();
+            }
+            if (runAudio2.isPlaying)
+            {
+                runAudio2.Stop();
+            }
+        }
+
         // Flip player sprite based on the direction of movement
         if (horizontalMove != 0)
         {
@@ -102,7 +127,7 @@ public class PlayerController : UnitySingleton<PlayerController>
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
             jumpCount--;
-
+            jumpAudio.Play();
         }
     }
 
@@ -118,6 +143,7 @@ public class PlayerController : UnitySingleton<PlayerController>
             // Transform to the old if there is no jumpCount;
             if (shouldChange)
             {
+                changeAudio.Play();
                 isChange = true;
                 shouldChange = false; // Reset the statement
                 //ChangeForm(true);
@@ -168,12 +194,14 @@ public class PlayerController : UnitySingleton<PlayerController>
             Destroy(other.gameObject);
             if(isOld)
             {
+                changeAudio.Play();
                 isChange = true;
                 //ChangeForm(false);
                 //Instantiate(ChangePrefab, rb.transform.position + new Vector3(0, 1.5f, 0), rb.transform.rotation, rb.transform);
             }
             else
             {
+                cellAudio.Play();
                 jumpCount += 1;
                 shouldChange = false;
                 isHurt = true;
@@ -181,6 +209,7 @@ public class PlayerController : UnitySingleton<PlayerController>
         }
         else if (other.gameObject.CompareTag("Hazard"))
         {
+            spikeAudio.Play();
             isDead = true;
         }
     }
