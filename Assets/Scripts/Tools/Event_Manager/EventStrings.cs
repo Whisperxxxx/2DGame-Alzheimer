@@ -1,6 +1,7 @@
 ﻿
 public class EventStrings 
 {
+
     #region  Test
     public const string TEST_EVENT = "TEST_EVENT";
     #endregion
@@ -16,4 +17,5 @@ public class EventStrings
    public const string TIME_CONTINUE = "TIME_CONTINUE";
    public const string GAME_OVER = "GAME_OVER";
    public const string GAME_WIN = "GAME_WIN";
+    public static string AMNESIC_POINT="AMNESIC_POINT";//失忆节点
 }

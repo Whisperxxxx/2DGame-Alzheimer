@@ -24,6 +24,7 @@ public class GameController : MonoBehaviour
             if (GameUIManager.Instance.timeCountDown <= GameUIManager.Instance.timeMax * 0.6)
             {
                 SwitchMaps();
+                YTEventManager.Instance.TriggerEvent(EventStrings.AMNESIC_POINT);
             }
         }
     }
