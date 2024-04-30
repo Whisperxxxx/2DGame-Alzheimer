@@ -6,10 +6,13 @@ using UnityEngine;
 public class KeyController : MonoBehaviour
 {
     private Vector3 initialPos;
+    private AudioSource audioSource;
     private void Start()
     {
         initialPos=transform.position;
         YTEventManager.Instance.AddEventListener(EventStrings.AMNESIC_POINT, LossKey);
+        
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void OnTriggerEnter2D(Collider2D other)

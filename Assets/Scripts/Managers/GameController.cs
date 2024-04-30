@@ -31,8 +31,12 @@ public class GameController : MonoBehaviour
         {
             if (GameUIManager.Instance.timeCountDown <= GameUIManager.Instance.timeMax * 0.6)
             {
+                //逆天代码
+                if (map1.activeSelf)
+                {
+                    YTEventManager.Instance.TriggerEvent(EventStrings.AMNESIC_POINT);
+                }
                 SwitchMaps();
-                YTEventManager.Instance.TriggerEvent(EventStrings.AMNESIC_POINT);
             }
         }
     }
