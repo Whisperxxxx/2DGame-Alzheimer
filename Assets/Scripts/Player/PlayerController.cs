@@ -15,7 +15,7 @@ public class PlayerController : UnitySingleton<PlayerController>
     [SerializeField]
     GameObject childSprite;
     [SerializeField]
-    GameObject ChangePrefab; // The animation prefab of changeform
+    //GameObject ChangePrefab; // The animation prefab of changeform
 
     public AudioSource jumpAudio, runAudio1, runAudio2, changeAudio, cellAudio, spikeAudio;
 

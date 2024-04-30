@@ -4,9 +4,34 @@ using UnityEngine;
 
 public class OldController : MonoBehaviour
 {
+    public SpriteRenderer spriteRenderer;
+    public Animator animator;
+
+    public Sprite nonKeySprite;
+    public Sprite keySprite;
+    public RuntimeAnimatorController nonKeyAnimatorController;
+    public RuntimeAnimatorController keyAnimatorController;
 
     public Vector2 bottomOffset;
 
+    void Update()
+    {
+        UpdateSprite();
+    }
+
+    private void UpdateSprite()
+    {
+        if (PlayerController.Instance.haveKey)
+        {
+            spriteRenderer.sprite = keySprite;
+            animator.runtimeAnimatorController = keyAnimatorController;
+        }
+        else
+        {
+            spriteRenderer.sprite = nonKeySprite;
+            animator.runtimeAnimatorController = nonKeyAnimatorController;
+        }
+    }
     // Adjust the collider when dying
     public void AdjustCollider()
     {
