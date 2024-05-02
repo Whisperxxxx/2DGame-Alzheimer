@@ -145,6 +145,7 @@ public class PlayerController : UnitySingleton<PlayerController>
             {
                 changeAudio.Play();
                 isChange = true;
+                isOld = true;
                 shouldChange = false; // Reset the statement
                 //ChangeForm(true);
                 //Instantiate(ChangePrefab, rb.transform.position + new Vector3(0, 1.5f, 0), rb.transform.rotation, rb.transform);
@@ -221,7 +222,6 @@ public class PlayerController : UnitySingleton<PlayerController>
         {
             oldSprite.SetActive(true);
             childSprite.SetActive(false);
-            isOld = true;
             jumpCount = 0;
             isChange = false;
         }

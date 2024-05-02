@@ -91,10 +91,12 @@ public class GameUIManager : UnitySingleton<GameUIManager>
     public void GameOver()
     {
         gameOverPanel.SetActive(true);
+        Time.timeScale = 0;
     }
     public void GameRestart()
     {
         //重新加载当前场景
+        Time.timeScale = 1;
         UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
     }
 }
