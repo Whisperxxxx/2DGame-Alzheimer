@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 546750569777365118}
   - component: {fileID: 3654780566530060412}
   - component: {fileID: 5497287533908964870}
+  - component: {fileID: 2320730621677942436}
   m_Layer: 0
   m_Name: 'Nerve Cell  '
   m_TagString: Cell
@@ -175,3 +176,16 @@ PolygonCollider2D:
       - {x: -0.42499998, y: 0.515}
       - {x: -0.49499997, y: 0.555}
   m_UseDelaunayMesh: 0
+--- !u!114 &2320730621677942436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3936741833169443093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b737ae5db33c344f950befbe13eb3f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cellTip: {fileID: 3936741833169443093}

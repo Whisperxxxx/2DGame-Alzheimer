@@ -30,7 +30,7 @@ public class PlayerController : UnitySingleton<PlayerController>
     public bool isOld = true; // Used to change the player form
     private bool isDead = false;
     private bool shouldChange = false; // Check if need to change form after falling
-    
+    public bool interactCell = false;
     public bool haveKey = false;
     
     // Returns the appropriate speed based on the current form
@@ -65,6 +65,10 @@ public class PlayerController : UnitySingleton<PlayerController>
         if (!isChange && !isDead)
         {
             Jump();
+        }
+        if (interactCell)
+        {
+            InteractCell();
         }
     }
 
@@ -186,29 +190,29 @@ public class PlayerController : UnitySingleton<PlayerController>
         }
     }
 
-
+    void InteractCell()
+    {
+        if (isOld)
+        {
+            changeAudio.Play();
+            isChange = true;
+            interactCell = false;
+            //ChangeForm(false);
+            //Instantiate(ChangePrefab, rb.transform.position + new Vector3(0, 1.5f, 0), rb.transform.rotation, rb.transform);
+        }
+        else
+        {
+            cellAudio.Play();
+            jumpCount += 1;
+            shouldChange = false;
+            isHurt = true;
+            interactCell = false;
+        }
+  
+    }
     void OnTriggerEnter2D(Collider2D other)
     {
-        // Check if collide with nerve cells
-        if (other.gameObject.CompareTag("Cell"))
-        {
-            Destroy(other.gameObject);
-            if(isOld)
-            {
-                changeAudio.Play();
-                isChange = true;
-                //ChangeForm(false);
-                //Instantiate(ChangePrefab, rb.transform.position + new Vector3(0, 1.5f, 0), rb.transform.rotation, rb.transform);
-            }
-            else
-            {
-                cellAudio.Play();
-                jumpCount += 1;
-                shouldChange = false;
-                isHurt = true;
-            }
-        }
-        else if (other.gameObject.CompareTag("Hazard"))
+        if (other.gameObject.CompareTag("Hazard"))
         {
             spikeAudio.Play();
             isDead = true;

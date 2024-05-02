@@ -43,7 +43,6 @@ public class GameController : MonoBehaviour
 
     private void SwitchMaps()
     {
-
         // change the maps
         if (map1.activeSelf)
         {
