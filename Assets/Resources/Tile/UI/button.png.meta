@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 52f4a66be2c4dcc439c7692dc6418485
+guid: b14615b9d78b31b45ae1dfb6afda6d10
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,22 +97,43 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: talk_0
+      name: "\u95C8\u3221\u6F98_0"
       rect:
         serializedVersion: 2
-        x: 89
-        y: 54
-        width: 1098
-        height: 161
+        x: 11
+        y: 112
+        width: 67
+        height: 78
       alignment: 0
       pivot: {x: 0, y: 0}
-      border: {x: 46, y: 21, z: 59, w: 18}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 702044f69de0ada429e70f442bb4ac1b
-      internalID: 846576218
+      spriteID: e9c787e53730004419b93daff63d53c2
+      internalID: 615255055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u95C8\u3221\u6F98_1"
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 13
+        width: 85
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35c7c06d696b21d469b45d4388cc7022
+      internalID: -1183728777
       vertices: []
       indices: 
       edges: []
@@ -128,7 +149,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      talk_0: 846576218
+      "\u95C8\u3221\u6F98_0": 615255055
+      "\u95C8\u3221\u6F98_1": -1183728777
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
