@@ -97,7 +97,10 @@ public class GameUIManager : UnitySingleton<GameUIManager>
     IEnumerator DelayTimeScale()
     {
         // 等待1秒
-        yield return new WaitForSecondsRealtime(1);
+        if (PlayerController.Instance.isDead)
+        {
+            yield return new WaitForSecondsRealtime(1);
+        }
         // 设置时间缩放为0
         Time.timeScale = 0;
     }
