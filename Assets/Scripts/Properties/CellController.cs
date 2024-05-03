@@ -21,7 +21,10 @@ public class CellController : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            cellTip.SetActive(true);
+            if (cellTip != null)
+            {
+                cellTip.SetActive(true);
+            }
             isPlayerNear = true;
         }
     }
@@ -30,7 +33,10 @@ public class CellController : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            cellTip.SetActive(false);
+            if (cellTip != null)
+            {
+                cellTip.SetActive(false);
+            }
             isPlayerNear = false;
         }
     }

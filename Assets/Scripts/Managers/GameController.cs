@@ -3,56 +3,92 @@ using UnityEngine;
 public class GameController : MonoBehaviour
 {
     [SerializeField]
-    GameObject base1;
+    private GameObject[] bases;
     [SerializeField]
-    GameObject base2;
+    private GameObject[] maps;
     [SerializeField]
-    GameObject map1;
+    private GameObject[] backgrounds;
     [SerializeField]
-    GameObject map2;
- 
+    private GameObject[] elevators;
+    [SerializeField]
+    private GameObject[] doors;
+    [SerializeField]
+    private GameObject[] balloons;
+    [SerializeField]
+    private GameObject[] nerveCells;
+    [SerializeField]
+    private GameObject[] hazards;
+    [SerializeField]
+    private GameObject[] keys;
+
     public AudioSource switchAudio, beforeAudio, afterAudio;
+    public float switchThreshold = 0.6f; // 控制何时切换地图的时间百分比
+
+    private int currentIndex = 0; // 当前地图索引
+    private bool switchTriggered = false; // 用于跟踪是否已经触发过地图切换
 
     void Start()
     {
-        // Only active the first map when the game starts
-        base1.SetActive(true);
-        base2.SetActive(false);
-        map1.SetActive(true); 
-        map2.SetActive(false);
+        ActivateMap(0); // 激活第一个地图
         beforeAudio.Play();
-
     }
 
     void Update()
     {
- 
-        if (GameUIManager.Instance != null)
+        if (GameUIManager.Instance != null && ShouldSwitchMap() && !switchTriggered)
         {
-            if (GameUIManager.Instance.timeCountDown <= GameUIManager.Instance.timeMax * 0.6)
-            {
-                //逆天代码
-                if (map1.activeSelf)
-                {
-                    YTEventManager.Instance.TriggerEvent(EventStrings.AMNESIC_POINT);
-                }
-                SwitchMaps();
-            }
+            SwitchMaps();
+            switchTriggered = true; // 标记为已触发切换
         }
+        else if (GameUIManager.Instance.timeCountDown > GameUIManager.Instance.timeMax * switchThreshold)
+        {
+            switchTriggered = false; // 重置触发状态
+        }
+    }
+
+    private bool ShouldSwitchMap()
+    {
+        return GameUIManager.Instance.timeCountDown <= GameUIManager.Instance.timeMax * switchThreshold;
     }
 
     private void SwitchMaps()
     {
-        // change the maps
-        if (map1.activeSelf)
+        int nextIndex = (currentIndex + 1) % maps.Length; // 循环切换
+        ActivateMap(nextIndex);
+
+        beforeAudio.Stop();
+        switchAudio.Play();
+        afterAudio.Play();
+        YTEventManager.Instance.TriggerEvent(EventStrings.AMNESIC_POINT);
+
+        currentIndex = nextIndex;
+    }
+
+    private void ActivateMap(int index)
+    {
+        SetActiveForGroup(bases, index);
+        SetActiveForGroup(maps, index);
+        SetActiveForGroup(backgrounds, index);
+        SetActiveForGroup(elevators, index);
+        SetActiveForGroup(doors, index);
+        SetActiveForGroup(balloons, index);
+        SetActiveForGroup(nerveCells, index);
+        SetActiveForGroup(hazards, index);
+        SetActiveForGroup(keys, index);
+    }
+
+    private void SetActiveForGroup(GameObject[] group, int index)
+    {
+        if (group.Length > 1)
         {
-            beforeAudio.Stop();
-            switchAudio.Play();
-            afterAudio.Play();
-            base1.SetActive(false);
-            base2.SetActive(true);
-            map1.SetActive(false);
-            map2.SetActive(true);
+            for (int i = 0; i < group.Length; i++)
+            {
+                group[i].SetActive(i == index);
+            }
+        }
+        else if (group.Length == 1)
+        {
+            group[0].SetActive(true); // 如果只有一个对象，始终保持激活状态
         }
     }
 }
