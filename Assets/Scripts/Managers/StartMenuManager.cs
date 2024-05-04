@@ -10,7 +10,7 @@ public class StartMenuManager : MonoBehaviour
     public void StartGame()
     {
         // Load the game scene
-        UnityEngine.SceneManagement.SceneManager.LoadScene("Level 1");
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Plot");
     }
     public void OpenSettings()
     {
