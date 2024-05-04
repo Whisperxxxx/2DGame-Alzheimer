@@ -11,12 +11,21 @@ GameObject:
   - component: {fileID: 9149756427250554134}
   - component: {fileID: 8303241834115246390}
   - component: {fileID: 827244639480883073}
+<<<<<<< HEAD
   - component: {fileID: 7888780825206518487}
   - component: {fileID: 7964089937718187501}
   - component: {fileID: 7572024123823600237}
   - component: {fileID: 6657685158332429564}
   - component: {fileID: 7548034746717860915}
   - component: {fileID: 2069701205871228344}
+=======
+  - component: {fileID: 122250284267013902}
+  - component: {fileID: 1332660039426015899}
+  - component: {fileID: 6050048289549860570}
+  - component: {fileID: 213157959998200982}
+  - component: {fileID: 7286510158215738101}
+  - component: {fileID: 627357048446743941}
+>>>>>>> 815aba60b7c6743097cd7426af179c61e2b6157d
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -33,7 +42,11 @@ Transform:
   m_GameObject: {fileID: 1448908555334429164}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+<<<<<<< HEAD
   m_LocalPosition: {x: -3.15, y: 8.28, z: 0}
+=======
+  m_LocalPosition: {x: -14.79, y: -5.53, z: 0}
+>>>>>>> 815aba60b7c6743097cd7426af179c61e2b6157d
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -86,19 +99,32 @@ MonoBehaviour:
     m_Bits: 8
   oldSprite: {fileID: 8491957714333543064}
   childSprite: {fileID: 7083189826088120898}
+<<<<<<< HEAD
   jumpAudio: {fileID: 7888780825206518487}
   runAudio1: {fileID: 7572024123823600237}
   runAudio2: {fileID: 6657685158332429564}
   changeAudio: {fileID: 7964089937718187501}
   cellAudio: {fileID: 7548034746717860915}
   spikeAudio: {fileID: 2069701205871228344}
+=======
+  jumpAudio: {fileID: 122250284267013902}
+  runAudio1: {fileID: 6050048289549860570}
+  runAudio2: {fileID: 213157959998200982}
+  changeAudio: {fileID: 1332660039426015899}
+  cellAudio: {fileID: 7286510158215738101}
+  spikeAudio: {fileID: 627357048446743941}
+>>>>>>> 815aba60b7c6743097cd7426af179c61e2b6157d
   jumpCount: 0
   isChange: 0
   isOld: 1
   isDead: 0
   interactCell: 0
   haveKey: 0
+<<<<<<< HEAD
 --- !u!82 &7888780825206518487
+=======
+--- !u!82 &122250284267013902
+>>>>>>> 815aba60b7c6743097cd7426af179c61e2b6157d
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -194,7 +220,11 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+<<<<<<< HEAD
 --- !u!82 &7964089937718187501
+=======
+--- !u!82 &1332660039426015899
+>>>>>>> 815aba60b7c6743097cd7426af179c61e2b6157d
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -290,7 +320,11 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+<<<<<<< HEAD
 --- !u!82 &7572024123823600237
+=======
+--- !u!82 &6050048289549860570
+>>>>>>> 815aba60b7c6743097cd7426af179c61e2b6157d
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -386,7 +420,11 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+<<<<<<< HEAD
 --- !u!82 &6657685158332429564
+=======
+--- !u!82 &213157959998200982
+>>>>>>> 815aba60b7c6743097cd7426af179c61e2b6157d
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -482,7 +520,11 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+<<<<<<< HEAD
 --- !u!82 &7548034746717860915
+=======
+--- !u!82 &7286510158215738101
+>>>>>>> 815aba60b7c6743097cd7426af179c61e2b6157d
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -578,7 +620,11 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+<<<<<<< HEAD
 --- !u!82 &2069701205871228344
+=======
+--- !u!82 &627357048446743941
+>>>>>>> 815aba60b7c6743097cd7426af179c61e2b6157d
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
