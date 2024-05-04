@@ -9,6 +9,21 @@ EditorBuildSettings:
     path: Assets/Scenes/Start.unity
     guid: b376c1edd8e487b4e994fded38cd9544
   - enabled: 1
-    path: Assets/Scenes/Level 1.unity
-    guid: 4068b4a2db1b2b2469539ee16f511ca0
+    path: Assets/Scenes/Plot.unity
+    guid: b04745966480031439138496c6f293b9
+  - enabled: 1
+    path: Assets/Scenes/Level 3.unity
+    guid: 9af3e729f26514743a922b4f09f036dc
+  - enabled: 1
+    path: Assets/Scenes/Last Level.unity
+    guid: c4009d36d48f2fb438f8572c108881ce
+  - enabled: 1
+    path: Assets/Scenes/Plot 1.unity
+    guid: 238ff7705320aa140a00b23f801c9cd1
+  - enabled: 1
+    path: Assets/Scenes/Truth.unity
+    guid: d890c138637e8284585351953e294fee
+  - enabled: 1
+    path: Assets/Scenes/Plot 2.unity
+    guid: a0cb0664b121f6e408f5e81a25d932d4
   m_configObjects: {}

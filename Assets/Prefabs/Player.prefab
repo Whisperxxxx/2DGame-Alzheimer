@@ -835,7 +835,7 @@ MonoBehaviour:
   keySprite: {fileID: -2068526621, guid: 3c2d6bd7a7d375b49af930fd30ea208a, type: 3}
   nonKeyAnimatorController: {fileID: 9100000, guid: 11b20d729935d5247ba0654d1cbd527f, type: 2}
   keyAnimatorController: {fileID: 9100000, guid: ca89ea3ca1725934d95d9268e83a40a9, type: 2}
-  bottomOffset: {x: -0.09, y: -0.8}
+  bottomOffset: {x: 0, y: -0.86}
 --- !u!1 &8491957714333543064
 GameObject:
   m_ObjectHideFlags: 0
@@ -997,4 +997,4 @@ MonoBehaviour:
   keySprite: {fileID: -1668481519, guid: 2470f9b420f55aa4d9daad01acecfb81, type: 3}
   nonKeyAnimatorController: {fileID: 9100000, guid: c237899ded95e7b48bfd9451b7c4fe72, type: 2}
   keyAnimatorController: {fileID: 9100000, guid: 0fb0055af7a59184d82edf5c86fd5a3c, type: 2}
-  bottomOffset: {x: -0.12, y: -0.82}
+  bottomOffset: {x: -0.12, y: -0.86}

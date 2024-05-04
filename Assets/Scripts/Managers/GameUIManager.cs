@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 
 public class GameUIManager : UnitySingleton<GameUIManager>
 {
@@ -79,12 +81,27 @@ public class GameUIManager : UnitySingleton<GameUIManager>
             timeCountDownMask.sizeDelta= new Vector2(1300*_timeCountDown/timeMax, 30);
             if (_timeCountDown<0f)
             {
-                YTEventManager.Instance.TriggerEvent(EventStrings.GAME_OVER);
+                // 获取当前场景的名称
+                string currentSceneName = SceneManager.GetActiveScene().name;
+
+                if (currentSceneName == "Last Level")
+                {
+                    // 如果当前场景是“Last Level”，则加载场景“Plot 2”
+                    SceneManager.LoadScene("Plot 2");
+                }
+                else
+                {
+                    YTEventManager.Instance.TriggerEvent(EventStrings.GAME_OVER);
+                }
             }
         }
     }
-
-
+    public float percent = 0.01f;
+    public void UpdateTime()
+    {
+        float reduction = timeCountDown * percent;
+        timeCountDown -= reduction;
+    }
 
     //游戏结束
     public GameObject gameOverPanel;

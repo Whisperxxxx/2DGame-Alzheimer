@@ -1889,7 +1889,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 829, y: -15}
-  m_SizeDelta: {x: 153.0043, y: 118.9527}
+  m_SizeDelta: {x: 160, y: 118.9527}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &167664153
 MonoBehaviour:
@@ -16009,7 +16009,7 @@ MonoBehaviour:
   switchAudio: {fileID: 1664854776}
   beforeAudio: {fileID: 1664854778}
   afterAudio: {fileID: 1664854777}
-  switchThreshold: 0.4
+  switchThreshold: 0.5
 --- !u!4 &1664854774
 Transform:
   m_ObjectHideFlags: 0
@@ -16042,6 +16042,7 @@ MonoBehaviour:
   timeMax: 130
   timeCountDownMask: {fileID: 1374186948}
   timeCountDownText: {fileID: 167664153}
+  percent: 0.05
   gameOverPanel: {fileID: 1812124146}
 --- !u!82 &1664854776
 AudioSource:
@@ -17842,7 +17843,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_Sprite: {fileID: 951761313, guid: b57136b10efbfec47a141e1e5a64af58, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -20011,7 +20012,7 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: c237899ded95e7b48bfd9451b7c4fe72, type: 2}
     - target: {fileID: 3696324009632103178, guid: 39e1fa54029b0d64b8fb4da78886fc84, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.28
+      value: -0.26
       objectReference: {fileID: 0}
     - target: {fileID: 4941701716705945753, guid: 39e1fa54029b0d64b8fb4da78886fc84, type: 3}
       propertyPath: animator
@@ -20025,6 +20026,10 @@ PrefabInstance:
       propertyPath: nonKeySprite
       value: 
       objectReference: {fileID: 743286284, guid: 1f873d1744c22e04e96339b4b231a749, type: 3}
+    - target: {fileID: 4941701716705945753, guid: 39e1fa54029b0d64b8fb4da78886fc84, type: 3}
+      propertyPath: bottomOffset.y
+      value: -0.86
+      objectReference: {fileID: 0}
     - target: {fileID: 4941701716705945753, guid: 39e1fa54029b0d64b8fb4da78886fc84, type: 3}
       propertyPath: spriteRenderer
       value: 
@@ -20045,6 +20050,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -1277655164, guid: d1950aeecab680846845e73d67e5c004, type: 3}
+    - target: {fileID: 6253277718541993165, guid: 39e1fa54029b0d64b8fb4da78886fc84, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6804915209917098167, guid: 39e1fa54029b0d64b8fb4da78886fc84, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -20061,6 +20070,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 743286284, guid: 1f873d1744c22e04e96339b4b231a749, type: 3}
+    - target: {fileID: 7769221304440528789, guid: 39e1fa54029b0d64b8fb4da78886fc84, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8058217454714956832, guid: 39e1fa54029b0d64b8fb4da78886fc84, type: 3}
       propertyPath: animator
       value: 
@@ -20073,6 +20086,14 @@ PrefabInstance:
       propertyPath: nonKeySprite
       value: 
       objectReference: {fileID: -1277655164, guid: d1950aeecab680846845e73d67e5c004, type: 3}
+    - target: {fileID: 8058217454714956832, guid: 39e1fa54029b0d64b8fb4da78886fc84, type: 3}
+      propertyPath: bottomOffset.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8058217454714956832, guid: 39e1fa54029b0d64b8fb4da78886fc84, type: 3}
+      propertyPath: bottomOffset.y
+      value: -0.86
+      objectReference: {fileID: 0}
     - target: {fileID: 8058217454714956832, guid: 39e1fa54029b0d64b8fb4da78886fc84, type: 3}
       propertyPath: spriteRenderer
       value: 
@@ -20103,11 +20124,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9149756427250554134, guid: 39e1fa54029b0d64b8fb4da78886fc84, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -18.43
+      value: -18.06
       objectReference: {fileID: 0}
     - target: {fileID: 9149756427250554134, guid: 39e1fa54029b0d64b8fb4da78886fc84, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.08
+      value: -4.66
       objectReference: {fileID: 0}
     - target: {fileID: 9149756427250554134, guid: 39e1fa54029b0d64b8fb4da78886fc84, type: 3}
       propertyPath: m_LocalPosition.z

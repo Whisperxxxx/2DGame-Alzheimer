@@ -194,6 +194,7 @@ public class PlayerController : UnitySingleton<PlayerController>
     {
         if (isOld)
         {
+            GameUIManager.Instance.UpdateTime();
             changeAudio.Play();
             isChange = true;
             interactCell = false;
@@ -202,6 +203,7 @@ public class PlayerController : UnitySingleton<PlayerController>
         }
         else
         {
+            GameUIManager.Instance.UpdateTime();
             cellAudio.Play();
             jumpCount += 1;
             shouldChange = false;
