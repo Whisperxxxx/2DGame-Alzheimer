@@ -10019,21 +10019,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ballon
       objectReference: {fileID: 0}
-    - target: {fileID: 6345012259899284225, guid: d111010bd77ac3347aa596b6dbc82bee, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -9.82
-      objectReference: {fileID: 0}
-    - target: {fileID: 6345012259899284225, guid: d111010bd77ac3347aa596b6dbc82bee, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -8.32
-      objectReference: {fileID: 0}
     - target: {fileID: 7502130090691851771, guid: d111010bd77ac3347aa596b6dbc82bee, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 15.55
+      value: 5.54
       objectReference: {fileID: 0}
     - target: {fileID: 7502130090691851771, guid: d111010bd77ac3347aa596b6dbc82bee, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.74
+      value: -0.86
       objectReference: {fileID: 0}
     - target: {fileID: 7502130090691851771, guid: d111010bd77ac3347aa596b6dbc82bee, type: 3}
       propertyPath: m_LocalPosition.z
