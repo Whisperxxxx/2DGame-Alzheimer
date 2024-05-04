@@ -36,7 +36,7 @@ public class StartMenuManager : MonoBehaviour
             UnityEditor.EditorApplication.isPlaying = false;  
         #else  
             // 如果在构建后的应用程序中运行，则退出应用程序
-            // Application.Quit();  
+             Application.Quit();  
         #endif  
     }
 }

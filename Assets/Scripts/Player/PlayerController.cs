@@ -66,7 +66,7 @@ public class PlayerController : UnitySingleton<PlayerController>
         {
             Jump();
         }
-        if (interactCell)
+        if (interactCell && !isChange)
         {
             InteractCell();
         }
