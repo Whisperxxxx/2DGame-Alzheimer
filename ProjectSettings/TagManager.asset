@@ -43,3 +43,21 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: back
+    uniqueID: 342331289
+    locked: 0
+  - name: tile
+    uniqueID: 3239091683
+    locked: 0
+  - name: base
+    uniqueID: 1924874413
+    locked: 0
+  - name: player
+    uniqueID: 923981611
+    locked: 0
+  - name: properties
+    uniqueID: 1782774583
+    locked: 0
+  - name: decoration
+    uniqueID: 1226978469
+    locked: 0
