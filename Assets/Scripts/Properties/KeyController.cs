@@ -21,10 +21,19 @@ public class KeyController : MonoBehaviour
         {
             audioSource.Play();
             PlayerController.Instance.haveKey = true;
-            gameObject.SetActive(false);
-            
+            StartCoroutine(DisableAfterSound());
         }
     }
+
+    private IEnumerator DisableAfterSound()
+    {
+        // 计算等待时间，确保不会产生负数的等待时间
+        float waitTime = Mathf.Max(0, audioSource.clip.length - 0.3f);
+        yield return new WaitForSeconds(waitTime);
+        gameObject.SetActive(false);
+    }
+
+
     private void LossKey()
     {
         gameObject.SetActive(true);

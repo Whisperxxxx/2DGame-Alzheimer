@@ -2807,11 +2807,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9149756427250554134, guid: 39e1fa54029b0d64b8fb4da78886fc84, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.12
+      value: -7.79
       objectReference: {fileID: 0}
     - target: {fileID: 9149756427250554134, guid: 39e1fa54029b0d64b8fb4da78886fc84, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.35
+      value: -6.64
       objectReference: {fileID: 0}
     - target: {fileID: 9149756427250554134, guid: 39e1fa54029b0d64b8fb4da78886fc84, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5465,6 +5465,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ada9a024b2a928342a6cac7f0778fe97, type: 3}
+--- !u!82 &629174114 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 4571623950573511525, guid: ada9a024b2a928342a6cac7f0778fe97, type: 3}
+  m_PrefabInstance: {fileID: 629174113}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &640886675
 GameObject:
   m_ObjectHideFlags: 0
@@ -6289,6 +6294,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ada9a024b2a928342a6cac7f0778fe97, type: 3}
+--- !u!82 &793234946 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 4571623950573511525, guid: ada9a024b2a928342a6cac7f0778fe97, type: 3}
+  m_PrefabInstance: {fileID: 793234945}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &808333709
 GameObject:
   m_ObjectHideFlags: 0
@@ -6811,19 +6821,19 @@ MonoBehaviour:
   - {fileID: 976498994}
   sfxSources:
   - {fileID: 976498996}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1401440385}
+  - {fileID: 1401440384}
+  - {fileID: 1401440383}
+  - {fileID: 1401440382}
+  - {fileID: 1401440381}
+  - {fileID: 1401440381}
   - {fileID: 1540842325}
   - {fileID: 757096097}
   - {fileID: 1655521343}
   - {fileID: 815194928}
   - {fileID: 990191151}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 629174114}
+  - {fileID: 793234946}
   musicVolumeSlider: {fileID: 1537682982}
   sfxVolumeSlider: {fileID: 664338427}
 --- !u!82 &976498994
