@@ -5954,9 +5954,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 2cd6d6e2f659fe247b4b335c568f24f0, type: 3}
     m_FontSize: 50
-    m_FontStyle: 1
+    m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 300
@@ -6087,11 +6087,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 736582569}
   m_CullTransparentMesh: 1
---- !u!82 &757096097 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 7868265245165907100, guid: 47d2179be123caa419cb729401b239dd, type: 3}
-  m_PrefabInstance: {fileID: 1814482925}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &776653076
 GameObject:
   m_ObjectHideFlags: 0
@@ -6207,8 +6202,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 262082808, guid: 58dfa9ad3138e3a46bec4cc74a2181e1, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -6680,8 +6675,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 262082808, guid: 58dfa9ad3138e3a46bec4cc74a2181e1, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -6828,8 +6823,8 @@ MonoBehaviour:
   - {fileID: 1401440381}
   - {fileID: 1401440381}
   - {fileID: 1540842325}
-  - {fileID: 757096097}
-  - {fileID: 1655521343}
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 815194928}
   - {fileID: 990191151}
   - {fileID: 629174114}
@@ -7438,8 +7433,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -50, y: -50}
-  m_SizeDelta: {x: 50, y: 50}
+  m_AnchoredPosition: {x: -67, y: -58}
+  m_SizeDelta: {x: 64.6349, y: 65.3652}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1102406667
 MonoBehaviour:
@@ -7510,14 +7505,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5320754, g: 0.43400663, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 650960144584956868, guid: 836eca08b5e3b4550a4538c2238266fd, type: 3}
+  m_Sprite: {fileID: -594909689, guid: 064ab6549ec60724ca0fdb3003f725cc, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -8598,9 +8593,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 2cd6d6e2f659fe247b4b335c568f24f0, type: 3}
     m_FontSize: 50
-    m_FontStyle: 1
+    m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 300
@@ -12331,9 +12326,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 2cd6d6e2f659fe247b4b335c568f24f0, type: 3}
     m_FontSize: 55
-    m_FontStyle: 1
+    m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 55
@@ -14462,11 +14457,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2655406517298357687, guid: 61310884b8b8fa340bf5618fb6cec2ea, type: 3}
   m_PrefabInstance: {fileID: 942487748}
   m_PrefabAsset: {fileID: 0}
---- !u!82 &1655521343 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 7868265245165907100, guid: 47d2179be123caa419cb729401b239dd, type: 3}
-  m_PrefabInstance: {fileID: 1455931216}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1660327551
 GameObject:
   m_ObjectHideFlags: 0
@@ -14621,8 +14611,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 615255055, guid: b14615b9d78b31b45ae1dfb6afda6d10, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
