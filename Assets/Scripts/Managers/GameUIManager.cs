@@ -108,19 +108,9 @@ public class GameUIManager : UnitySingleton<GameUIManager>
     public void GameOver()
     {
         gameOverPanel.SetActive(true);
-        StartCoroutine(DelayTimeScale());
-    }
-
-    IEnumerator DelayTimeScale()
-    {
-        // 等待1秒
-        if (PlayerController.Instance.isDead)
-        {
-            yield return new WaitForSecondsRealtime(1);
-        }
-        // 设置时间缩放为0
         Time.timeScale = 0;
     }
+
 
     public void GameRestart()
     {

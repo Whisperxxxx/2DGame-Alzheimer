@@ -55,4 +55,8 @@ public class ChildController : MonoBehaviour
 
     }
 
+    public void Death()
+    {
+        YTEventManager.Instance.TriggerEvent(EventStrings.GAME_OVER);
+    }
 }

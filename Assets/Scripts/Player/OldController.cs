@@ -69,4 +69,9 @@ public class OldController : MonoBehaviour
         PlayerController.Instance.ChangeForm(false);
     }
 
+    public void Death()
+    {
+        YTEventManager.Instance.TriggerEvent(EventStrings.GAME_OVER);
+    }
+
 }

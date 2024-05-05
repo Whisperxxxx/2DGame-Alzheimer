@@ -140,53 +140,55 @@ public class PlayerController : UnitySingleton<PlayerController>
         // Update animation parameters
         Animator animator = CurrentAnimator; 
         animator.SetFloat("running", Mathf.Abs(rb.velocity.x));
-        if (isGround)
+        if (!isDead)
         {
-            animator.SetBool("falling", false);
+            if (isGround)
+            {
+                animator.SetBool("falling", false);
 
-            // Transform to the old if there is no jumpCount;
-            if (shouldChange)
-            {
-                changeAudio.Play();
-                isChange = true;
-                isOld = true;
-                shouldChange = false; // Reset the statement
-                //ChangeForm(true);
-                //Instantiate(ChangePrefab, rb.transform.position + new Vector3(0, 1.5f, 0), rb.transform.rotation, rb.transform);
+                // Transform to the old if there is no jumpCount;
+                if (shouldChange)
+                {
+                    changeAudio.Play();
+                    isChange = true;
+                    isOld = true;
+                    shouldChange = false; // Reset the statement
+                                          //ChangeForm(true);
+                                          //Instantiate(ChangePrefab, rb.transform.position + new Vector3(0, 1.5f, 0), rb.transform.rotation, rb.transform);
+                }
             }
-        }
-        else if (!isGround && rb.velocity.y > 0)
-        {
-            animator.SetBool("jumping", true);
-        }
-        else if (rb.velocity.y < 0)
-        {
-            animator.SetBool("jumping", false);
-            animator.SetBool("falling", true);
-            // Check if the form should be changed;
-            if (jumpCount <= 0 && !isOld) // only child can call ChangeForm(true)
+            else if (!isGround && rb.velocity.y > 0)
             {
-                shouldChange = true;
+                animator.SetBool("jumping", true);
             }
-        }
-        if (isHurt)
-        {
-            animator.SetBool("hurting", true);
+            else if (rb.velocity.y < 0)
+            {
+                animator.SetBool("jumping", false);
+                animator.SetBool("falling", true);
+                // Check if the form should be changed;
+                if (jumpCount <= 0 && !isOld) // only child can call ChangeForm(true)
+                {
+                    shouldChange = true;
+                }
+            }
+            if (isHurt)
+            {
+                animator.SetBool("hurting", true);
+            }
+            else
+            {
+                animator.SetBool("hurting", false);
+
+            }
+            if (isChange)
+            {
+                animator.SetTrigger("change");
+            }
+
         }
         else
         {
-            animator.SetBool("hurting", false);
-
-        }
-        if (isChange)
-        {
-            animator.SetTrigger("change");
-        }
-
-        if (isDead)
-        {
             animator.SetTrigger("death");
-            YTEventManager.Instance.TriggerEvent(EventStrings.GAME_OVER);
         }
     }
 
