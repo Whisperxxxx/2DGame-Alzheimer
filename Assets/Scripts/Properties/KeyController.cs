@@ -6,7 +6,7 @@ using UnityEngine;
 public class KeyController : MonoBehaviour
 {
     private Vector3 initialPos;
-    private AudioSource audioSource;
+    public AudioSource audioSource;
     private void Start()
     {
         initialPos=transform.position;
@@ -19,9 +19,10 @@ public class KeyController : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            audioSource.Play();
             PlayerController.Instance.haveKey = true;
             gameObject.SetActive(false);
-            Debug.Log("pick the key");
+            
         }
     }
     private void LossKey()

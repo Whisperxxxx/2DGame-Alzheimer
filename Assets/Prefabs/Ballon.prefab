@@ -75,7 +75,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 1185935611, guid: 3859aadde68df0c4390bc4e94abcb7a6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -102,7 +102,7 @@ MonoBehaviour:
   initialPos: {x: 0, y: 0, z: 0}
   finalPos: {x: 0, y: 0, z: 0}
   moveDuration: 1
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 700419869294835963}
 --- !u!58 &6030842805134671352
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -308,7 +308,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 1185935611, guid: 3859aadde68df0c4390bc4e94abcb7a6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.2627451}
   m_FlipX: 0
