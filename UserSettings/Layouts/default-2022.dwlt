@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1536
     height: 780.8
   m_ShowMode: 4
-  m_Title: Scene
+  m_Title: Hierarchy
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -206,7 +206,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 40
+  controlID: 94
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -518,23 +518,23 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 4c7f0100
-      m_LastClickedID: 98124
-      m_ExpandedIDs: 8091ffffce91ffff9c93ffffa093ffffa493ffff7895ffff4496ffff0897ffff1097ffff2897ffffdc9bffff209cffff0c9effff149effff1c9efffff49fffffc4a0ffff8ca1ffff98a1ffffb4a1ffff8ea4ffff40a8ffff8aaaffff4cb1ffff82b6ffff62cdffff2ed6ffff7cd9ffff28e0ffffd2e2ffff18e4ffff38eeffff4aefffff4af4ffff22f6ffff7cf9ffff00fbffff086d0000706d0000c4730000da7800005c7b00009c7b00006a86000044880000b48f0000b8900000149700005698000002a10000cea1000010a2000096a80000e2a9000066aa000080aa000014c1000036c10000c2c1000034c2000082c200007ac3000092c3000014fc000040fc00006afc000036fd000078fd000098fd00009e1101000c1201001a120100ce120100fe1301002a1401009652010004530100
+      m_SelectedIDs: f46f0000
+      m_LastClickedID: 28660
+      m_ExpandedIDs: a0f9ffff00fbffff166f0000f46f0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: "\u91CD\u65B0\u5F00\u59CB"
-        m_OriginalName: "\u91CD\u65B0\u5F00\u59CB"
+        m_Name: DialogueTips
+        m_OriginalName: DialogueTips
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: -17842
+        m_UserData: 28660
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 4
+        m_OriginalEventType: 0
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 5}
       m_SearchString: 
@@ -636,7 +636,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/Scripts/Dialogue
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -644,15 +644,15 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Scripts/Dialogue
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\Unity\Item\2DGame-Alzheimer-main
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 233.40002}
-    m_SelectedIDs: aa6a0000
-    m_LastClickedID: 27306
+    scrollPos: {x: 0, y: 265.40002}
+    m_SelectedIDs: c86a0000
+    m_LastClickedID: 27336
     m_ExpandedIDs: 0000000046680000486800004a6800004c6800004e680000506800005268000054680000a86a000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -1158,7 +1158,7 @@ MonoBehaviour:
       containerId: overlay-container--right
       floating: 0
       collapsed: 0
-      displayed: 0
+      displayed: 1
       snapOffset: {x: -136, y: -44}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 3
@@ -1217,9 +1217,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 1098.2865, y: 624.6872, z: -5.779362}
+    m_Target: {x: 589.17834, y: 617.38965, z: -7.221381}
     speed: 2
-    m_Value: {x: 1098.2865, y: 624.6872, z: -5.779362}
+    m_Value: {x: 620.86505, y: 624.8204, z: -6.9061074}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1269,9 +1269,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 736.05225
+    m_Target: 732.1382
     speed: 2
-    m_Value: 736.05225
+    m_Value: 700.6107
   m_Ortho:
     m_Target: 1
     speed: 2
